@@ -16,17 +16,15 @@ public class QuadraticEquation {
         double a = scanner.nextDouble();
         double b = scanner.nextDouble();
         double c = scanner.nextDouble();
-        double d;
-        double x1;
-        double x2;
         if (a != 0) {
-            d = b * b - FOUR * a * c;
+            double d = b * b - FOUR * a * c;
             if (d > 0) {
-                x1 = (-b - Math.sqrt(d)) / (TWO * a);
-                x2 = (-b + Math.sqrt(d)) / (TWO * a);
+                double sqrtOfDiscriminant = Math.sqrt(d);
+                double x1 = (-b - sqrtOfDiscriminant) / (TWO * a);
+                double x2 = (-b + sqrtOfDiscriminant) / (TWO * a);
                 System.out.printf("%s %s", x1, x2);
             } else if (d == 0) {
-                x1 = -b / (TWO * a);
+                double x1 = -b / (TWO * a);
                 System.out.println(x1);
             } else {
                 System.out.print("no roots");
